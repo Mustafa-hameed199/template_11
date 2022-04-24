@@ -1,0 +1,50 @@
+@use "../global/variables.scss" as *;
+@use "../util/" as *;
+
+.details {
+    &__box {
+        display: grid;
+        gap: 4rem;
+        
+        .item:nth-child(even) { @include brTo(mobile-md) {  flex-direction: column-reverse } }
+        .item {
+            display: flex;
+            align-items: center;
+            &__img { padding: 2rem }
+            
+            @include brTo(mobile-md) { 
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            @include br(md) { &__img { flex-basis: 40% } }
+            
+            &__text {
+                @include br(md) { flex-basis: 60% }
+                color: var(--p-clr);
+                .mb { margin-bottom: rem(18) }
+                .italic { font-style: italic }
+                h3 {
+                    color: var(--secondary-clr);
+                    font-size: rem(26);
+                    font-weight: 600;
+                    margin-bottom: rem(8);
+                }
+                ul {
+                    display: grid;
+                    gap: 1rem;
+                    margin-bottom: 1.5rem;
+                    li {
+                        display: flex;
+                        align-items: center;
+                        gap: rem(14);
+                    }
+                    i { 
+                        font-size: rem(12);
+                        color: var(--main-clr);
+                    }
+                }
+            }
+        }
+    }
+}

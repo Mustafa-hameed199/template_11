@@ -1,0 +1,130 @@
+@use "../global/variables.scss" as *;
+@use "../util/" as *;
+
+.home {
+    position: relative;
+    background: url(../img/hero-bg.jpg) right no-repeat;
+    background-size: cover;
+    color: white;
+    padding-top: rem(120);
+    padding-bottom: rem(150);
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: rgba($secondary-clr, .95);
+    }
+    &::after {
+        content:'';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: rem(143);
+        background: url(../img/wave.png);
+        animation: moveBg 10s linear infinite;
+    }
+
+    .wave {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: rem(143);
+        background: url(../img/wave.png);
+        animation: moveBg 10s linear infinite;
+        &::before {
+            all: inherit;
+            content: '';
+            opacity: .4;
+            animation: moveBg 7s linear infinite reverse;
+        }
+        &::after {
+            all: inherit;
+            content: '';
+            opacity: .2;
+            animation: moveBg 8s linear infinite ;
+        }
+    }
+
+    &__img { 
+        img {
+            animation: fly 2.5s ease-in-out infinite alternate;
+            margin-left: auto;
+            width: 90%;
+            @include brTo(mobile-md) {
+                margin: 0 auto;
+                width: 60%;
+            }
+        }
+    }
+
+    &__box {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        @include br(md) { flex-direction: row-reverse }
+    }
+
+    &__text {
+        font-family: var(--ff-montserrat);
+        @include brTo(mobile-md) { text-align: center }
+    }
+    &__title {
+        font-size: clamp(rem(28), 1rem + 3vw, rem(48));
+        text-transform: capitalize;
+        margin-bottom: rem(10);
+        @include br(md) { margin-bottom: rem(20) }
+
+        span {
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: rem(-2.5);
+                left: 0;
+                height: rem(5);
+                width: 100%;
+                background-color: var(--main-clr);
+            }
+        }
+    }
+    &__p { 
+        font-size: clamp(rem(18), .5rem + 3vw, rem(24)); 
+        font-weight: 500;
+        line-height: normal; 
+        margin-bottom: rem(30);
+        @include br(md) { margin-bottom: rem(40) }
+    }
+    &__btn {
+        display: block;
+        width: fit-content;
+        padding: .75rem 2rem;
+        border-radius: 100vw;
+        background-color: var(--main-clr);
+        text-transform: capitalize;
+        letter-spacing: rem(1);
+        transition: .5s ease;
+        &:hover { background-color: var(--dark-main-clr) }
+        @include brTo(mobile-md) { margin: 0 auto; }
+    }
+}
+
+@keyframes fly {
+    0% { transform: translateY(-10px) }
+    100% { transform: translateY(20px) }
+}
+
+@keyframes moveBg {
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: rem(1306);
+    }
+}

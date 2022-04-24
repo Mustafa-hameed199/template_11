@@ -1,0 +1,87 @@
+@use "../util/" as *;
+
+.gallery {
+    &__box {
+        display: grid;
+        grid-template-columns: 1fr;
+        @include br(sm) { grid-template-columns: repeat(2, 1fr) }
+        @include br(md) { grid-template-columns: repeat(4, 1fr)}
+        gap: rem(4);
+
+        .img {
+            overflow: hidden;
+            cursor: pointer;
+            img { transition: transform .5s ease }
+            &:hover { img { transform: scale(1.1) } }
+        }
+    }
+    .popup-img {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        background-color: rgba(black , .8);
+        transition: .5s ease;
+        opacity: 0;
+        font-size: 1.5rem;
+
+        &.show {
+            opacity: 1;
+            z-index: 1000;
+        }
+        .cancel-btn,
+        .right-btn,
+        .left-btn {
+            position: absolute;
+            top: 50%;
+            z-index: 2;
+            transform: translateY(-50%);
+            padding: rem(10) rem(15);
+            background-color: rgba(black , .5);
+            color: rgba(white , .5);
+            transition: .3s ease;
+            cursor: pointer;
+            &:hover { 
+                background-color: rgba(black , 1);
+                color: white;
+            }
+        }
+
+        .right-btn { right: 2rem }
+        .left-btn { left: 2rem }
+
+        .cancel-btn {
+            right: 2rem;
+            top: 1rem;
+            transform: translateY(0);
+        }
+
+        .box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: calc(75% - 1rem);
+            height: calc(100% - 1rem);
+            @include br(mobile) {
+                height: calc(80% - 1rem);
+                width: calc(100% - 1rem);
+            }
+            overflow: hidden;
+            
+            .slider {
+                display: grid;
+                grid-auto-flow: column;
+                grid-auto-columns: 100%;
+                margin: 0 auto;
+                height: 100%;
+                transition: .5s ease;
+                
+                .item {
+                    opacity: 0;
+                    transition: .5s ease;
+                    &.active { opacity: 1 }
+                }
+            }
+        }
+    }
+}

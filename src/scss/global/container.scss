@@ -1,0 +1,11 @@
+@use "../util" as *;
+
+.container {
+    padding: 0 rem(15);
+    margin: 0 auto;
+
+    @include br(mobile) { max-width: rem(540) }
+    @include br(sm) { max-width: rem(750) }
+    @include br(md) { max-width: rem(970) }
+    @include br(lg) { max-width: rem(1170) }
+}

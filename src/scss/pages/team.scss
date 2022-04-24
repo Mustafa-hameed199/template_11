@@ -1,0 +1,66 @@
+@use "../global/variables.scss" as *;
+@use "../util/" as *;
+
+.team {
+    &__box {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: 1fr;
+        @include br(sm) { grid-template-columns: repeat(2 , 1fr) }
+        @include br(md) { grid-template-columns: repeat(4 , 1fr) }
+
+        .person-card {
+            text-transform: capitalize;
+            text-align: center;
+            border-radius: rem(5);
+            color: var(--secondary-clr);
+            box-shadow: 0 rem(5) rem(10) rgba(black , .1);
+            overflow: hidden;
+
+            .img { overflow: hidden }
+            img { transition: .5s ease }
+            &:hover { img { transform: scale(1.1) } }
+
+
+            h3 {
+                position: relative;
+                font-size: 1rem;
+                padding: .75rem;
+                background-color: rgba(white , .9);
+                margin-top: calc((.75rem * 2 + 1rem) * -1);
+                &:before {
+                    content: '';
+                    position: absolute;
+                    bottom: 2px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: rem(50);
+                    height: rem(1);
+                    background-color: var(--secondary-clr);
+                }
+            }
+
+            p {
+                font-size: rem(13);
+                font-style: italic;
+                padding: .75rem;
+                background-color: white;
+            }
+
+            .social {
+                display: flex;
+                width: fit-content;
+                margin: 0 auto;
+                gap: .5rem;
+                padding-bottom: .75rem;
+                background-color: white;
+
+                i {
+                    transition: .5s ease;
+                    &:hover { color: var(--main-clr) }
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,88 @@
+@use "../global/variables.scss" as *;
+@use "../util/" as *;
+
+.testimonials {
+    padding: rem(80) 0;
+    background: url(../img/cta-bg.jpg) center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: rgba($secondary-clr,.8);
+    }
+    .box {
+        position: relative;
+        z-index: 2;
+        overflow: hidden;
+        .slider {
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: 100%;
+            color: white;
+            text-align: center;
+            transition: .5s ease;
+
+            img {
+                width: rem(100);
+                height: rem(100);
+                border-radius: 50%;
+                border: solid 6.5px rgba(white , .15);
+                margin: 0 auto;
+            }
+
+            h3 {
+                font-size: rem(20);
+                text-transform: capitalize;
+                margin-top: rem(10);
+            }
+            h5 {
+                font-size: rem(14);
+                font-weight: 500;
+                text-transform: capitalize;
+                color: #dddddd;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                font-style: italic;
+                color: var(--p-white-clr);
+                font-weight: 400;
+                width: 79ch;
+                @include br(mobile) { width: auto }
+                margin: 0 auto;
+                i { 
+                    font-size: rem(26); 
+                    color: rgba(white , .4);
+                }
+                i:first-child {
+                    margin-right:.25rem; 
+                    transform: translateY(rem(-3));
+                }
+                i:last-child {
+                    margin-left:.25rem; 
+                    transform: translateY(rem(10));
+                }
+            }
+        }
+
+        .indicators {
+            display: flex;
+            gap: .5rem;
+            width: fit-content;
+            margin: 3rem auto 0;
+            
+            li {
+                width: rem(12);
+                height: rem(12);
+                border-radius: 50%;
+                background-color: rgba(white , .4);
+                transition: .5s ease;
+                cursor: pointer;
+                &.active { background-color: var(--main-clr) }
+            }
+        }
+    }
+}

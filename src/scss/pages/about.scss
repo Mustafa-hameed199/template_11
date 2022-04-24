@@ -1,0 +1,141 @@
+@use "../global/variables.scss" as *;
+@use "../util/" as *;
+
+.about {
+    &__box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        
+        @include br(md) { flex-direction: row }
+    }
+
+    &__video {
+        position: relative;
+        
+        a {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: grid;
+            place-items: center;
+            width: rem(80);
+            height: rem(80);
+            border-radius: 50%;
+            font-size: 1.5rem;
+            background-color: var(--soft-secondary-clr);
+            box-shadow: 0 0 0 14px rgba($secondary-clr,.3);
+            color: white;
+            transition: .5s ease;
+            animation: heart 2s infinite linear;
+
+            &::before {
+                content: '\f144';
+                font-family: "Font Awesome 6 Free";
+                display: grid;
+                place-items: inherit;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                z-index: -1;
+                color: transparent;
+                font-size: 2rem;
+                transform: translate(-50%, -50%);
+                width: calc(100% + 2px);
+                height: calc(100% + 2px);
+                border-radius: inherit;
+                background-color: inherit;
+                transition: .5s ease;
+                pointer-events: none;
+            }
+            i {
+                transition: .5s ease;
+                pointer-events: none;
+            }
+            
+            &:hover {
+                animation: unset;
+                &::before { 
+                    color: inherit;
+                    width: calc(100% + 26px);
+                    height: calc(100% + 26px);
+                }
+                
+                i {
+                    transform: scale(10);
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+    &__text {
+        flex-basis: 70%;
+        .title { 
+            font-size: rem(28);
+            color: var(--secondary-clr);
+            margin-bottom: rem(15);
+        }
+        .desc { color: var(--p-clr) }
+
+        .items {
+            display: grid;
+            gap: 3.5rem;
+            margin-top: 2rem;
+        }
+
+        .item {
+            display: flex;
+            @include br(mobile) { 
+                flex-direction: column;
+                text-align: center; 
+            }
+            gap: 1.5rem;
+            &:hover {
+                .icon i {
+                    background-color: var(--main-clr);
+                    color: white;
+                }
+            }
+
+            h3 {
+                font-size: rem(18);
+                text-transform: capitalize;
+                margin-bottom: rem(10);
+                transition: .5s ease;
+                &:hover { color: var(--main-clr) }
+            }
+            p { color: var(--p-clr) }
+
+            .icon {
+                @include br(mobile) { margin: 0 auto }
+                i {
+                    display: grid;
+                    place-items: center;
+                    width: rem(64);
+                    height: rem(64);
+                    border-radius: 50%;
+                    border: 1px solid var(--main-clr);
+                    color: var(--main-clr);
+                    font-size: rem(32);
+                    transition: .5s ease;
+                }
+            }
+        }
+    }
+}
+
+
+@keyframes heart {
+    50% {
+        box-shadow: 0 0 0 14px rgba($secondary-clr,.3),
+                    0 0 0 16px rgba($secondary-clr,.3);
+    }
+    100% {
+        box-shadow: 0 0 0 14px rgba($secondary-clr,.3),
+                    0 0 0 20px rgba($secondary-clr,0);
+    }
+}

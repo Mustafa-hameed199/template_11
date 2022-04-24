@@ -1,0 +1,43 @@
+@use "../util/" as *;
+
+$main-clr:  #1ACC8D;
+$dark-main-clr: hsl(159, 77%, 35%);
+$secondary-clr: #010483; // for using rgba($secondary-clr, ...);
+$p-clr: #444444;
+$p-white-clr: #eeeeee;
+
+:root {
+// ----------------- colors --------------
+    --main-clr: #1ACC8D;
+    --dark-main-clr: hsl(159, 77%, 35%);
+    --secondary-clr: hsl(239, 98%, 26%);
+    --dark-secondary-clr: hsl(239, 98%, 16%);
+    --vary-dark-secondary-clr: hsl(239, 97%, 14%);
+    --soft-secondary-clr: hsl(239, 98%, 40%);
+    --p-clr: #444444;
+    --p-white-clr: #eeeeee;
+    --mh-h-clr: #aaaaaa;  // main heading h2 clr
+    --main-bg-clr: #F1F1FF;
+
+    // colors for icons 
+    --yellow: #FFBB2C;
+    --dark-yellow: #FFA76E;
+    --blue: #5578FF;
+    --sky-blue: #47AEFF;
+    --dark-blue: #4233FF;
+    --pink: #E38FFF;
+    --dark-pink: #E80368;
+    --cyan: #11DBCF;
+    --brown: #B2904F;
+    --dark-red: #B20969;
+    --orange: #FF5828;
+    --green: #81CD61;
+
+// ----------------- text --------------
+    --ff-poppins: 'Poppins', sans-serif;
+    --ff-montserrat: 'Montserrat', sans-serif;
+    --ff-open-sans: 'Open Sans', sans-serif;
+// ----------------- space --------------
+    --sec-padding: #{rem(60)};
+
+}

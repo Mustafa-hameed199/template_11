@@ -1,0 +1,38 @@
+@use "../util/" as *;
+
+.features {
+    &__box {
+        display: grid;
+        grid-template-columns: repeat(auto-fit , minmax(250px , 1fr));
+        gap: rem(24);
+
+        .item {
+            display: flex;
+            @include br(mobile) { justify-content: center }
+            align-items: center;
+            gap: rem(10);
+            background-color: var(--main-bg-clr);
+            padding: rem(20);
+            text-transform: capitalize;
+            text-align: center;
+            color: var(--secondary-clr);
+            font-weight: 700;
+            font-family: var(--ff-montserrat);
+
+            i { font-size: rem(32) }
+        }
+
+        .item:nth-child(1) i { color: var(--yellow) }
+        .item:nth-child(2) i { color: var(--blue) }
+        .item:nth-child(3) i { color: var(--dark-pink) }
+        .item:nth-child(4) i { color: var(--pink) }
+        .item:nth-child(5) i { color: var(--sky-blue) }
+        .item:nth-child(6) i { color: var(--dark-yellow) }
+        .item:nth-child(7) i { color: var(--cyan) }
+        .item:nth-child(8) i { color: var(--dark-blue) }
+        .item:nth-child(9) i { color: var(--brown) }
+        .item:nth-child(10) i { color: var(--dark-red) }
+        .item:nth-child(11) i { color: var(--orange) }
+        .item:nth-child(12) i { color: var(--green) }
+    }
+}

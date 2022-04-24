@@ -1,0 +1,98 @@
+@use "../global/variables.scss" as *;
+@use "../util/" as *;
+
+
+.pricing {
+    &__box {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: 1fr;
+        @include br(sm) { grid-template-columns: repeat(2 , 1fr) }
+        @include br(md) { grid-template-columns: repeat(4 , 1fr) }
+
+        .price-card {
+            border-radius: rem(5);
+            text-align: center;
+            text-transform: capitalize;
+            color: var(--p-clr);
+            box-shadow: 0 rem(5) rem(10) rgba(black , .1);
+            overflow: hidden;
+
+            .title {
+                position: relative;
+                padding: rem(20);
+                font-weight: 600;
+                background-color: #f8f8f8;
+                color: #777777;
+                &.bg-green {
+                    background-color: var(--main-clr);
+                    color: white;
+                }
+
+                &.advanced {
+                    &::before {
+                        content: 'Advanced';
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        transform: translate(35px,-50%) rotate(45deg);
+                        font-size: rem(14);
+                        font-weight: 400;
+                        font-family: var(--ff-open-sans);
+                        width: fit-content;
+                        padding: .25rem 2rem;
+                        background-color: var(--main-clr);
+                        color: white;
+                    }
+                }
+            }
+
+            .price {
+                font-size: rem(36);
+                font-family: var(--ff-poppins);
+                padding: rem(20);
+                color: var(--main-clr);
+                font-weight: 600;
+
+                sup { font-size: rem(20) }
+                span {
+                    color: #bababa;
+                    font-size: 1rem;
+                    font-weight: 300;
+                    text-transform: lowercase;
+                }
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                margin-bottom: 1.5rem;
+                font-size: rem(14);
+                .line{
+                    text-decoration: line-through;
+                    color: #cccccc;
+                }
+            }
+
+            .btn {
+                font-family: var(--ff-montserrat);
+                font-size: rem(14);
+                font-weight: 600;
+                padding: rem(20); 
+                background-color: #f8f8f8;
+                color: white;
+                a {
+                    display: block;
+                    width: fit-content;
+                    padding: rem(10) rem(35);
+                    margin: 0 auto;
+                    border-radius: 100vw;
+                    background-color: var(--main-clr);
+                    transition: .5s ease;
+                    &:hover { background-color: var(--dark-main-clr) }
+                }
+            }
+        }
+    }
+}

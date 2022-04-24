@@ -1,0 +1,130 @@
+@use "../global/variables.scss" as *;
+@use "../util/" as *;
+
+.footer {
+    color: white;
+    background-color: var(--secondary-clr);
+    background-color: var(--dark-secondary-clr);
+
+    &__box {
+        display: grid;
+        @include br(sm) { grid-template-columns: repeat(2 , 1fr)  }
+        @include br(md) { grid-template-columns: 1fr auto auto 1fr }
+        row-gap: 2.5rem;
+        column-gap: 1.5rem;
+
+        .info {
+            .border-top {
+                font-family: var(--ff-montserrat);
+                font-size: rem(14);
+                padding: rem(20) rem(30);
+                text-align: center;
+                background-color: var(--vary-dark-secondary-clr);
+                border-top: solid rem(5) var(--main-clr);
+            }
+
+            h4 {
+                font-size: rem(24);
+                text-transform: capitalize;
+                margin-bottom: rem(20);
+            }
+            
+            h5 {
+                font-size: 1rem;
+                text-transform: capitalize;
+                margin-bottom: rem(18);
+            }
+            .italic { font-style: italic }
+            p { line-height: 1.6 }
+
+            .social {
+                display: flex;
+                gap: .5rem;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+
+                i {
+                    display: grid;
+                    place-items: center;
+                    width: rem(36);
+                    height: rem(36);
+                    border-radius: 50%;
+                    transition: .4s ease
+                }
+                i:hover { 
+                    background-color: var(--main-clr);
+                    color: white;
+                }
+            }
+            .links {
+                display: grid;
+                align-items: center;
+                gap: 1.25rem;
+                padding-left: rem(5);
+                font-size: rem(14);
+                text-transform: capitalize;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    gap: .5rem;
+                }
+                i { color: var(--main-clr) }
+                a {
+                    transition: .4s ease;
+                    &:hover { color: var(--main-clr) }
+                }
+            }
+
+            form {
+                position: relative;
+                border-radius: 100vw;
+                margin-top: rem(30);
+                input {
+                    width: 100%;
+                    border-radius: inherit;
+                    padding: rem(12) rem(120) rem(12) rem(20);
+                    border: none;
+                }
+
+                .btn {
+                    all: unset;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    height: 100%;
+                    padding: 0 rem(20);
+                    border-radius: inherit;
+                    text-transform: capitalize;
+                    background-color: var(--main-clr);
+                    color: white;
+                    cursor: pointer;
+                    transition: .4s ease;
+                    &:hover { background-color: var(--dark-main-clr) }
+                }
+            }
+        }
+    }
+
+    .copyright {
+        font-size: rem(14);
+        padding-top: 2rem;
+        margin-top: 4rem;
+        border-top: solid 1px #010479;
+        text-transform: capitalize;
+        text-align: center;
+    }
+    .source {
+        font-size: rem(13);
+        text-transform: capitalize;
+        text-align: center;
+        margin-top: .75rem;
+        a {
+            color: var(--dark-main-clr);
+            transition: .4s ease;
+            &:hover { color: var(--main-clr) }
+        }
+        
+    }
+}

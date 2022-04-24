@@ -1,0 +1,58 @@
+@use "../util/" as *;
+
+.FAQ {
+    background-color: var(--main-bg-clr);
+    &__box {
+        display: grid;
+        gap: 1rem;
+        
+        .question {
+            position: relative;
+            padding: rem(20);
+            border-radius: rem(5);
+            background-color: white;
+            &.open,
+            &:hover { h3 { color: var(--main-clr) } }
+
+            &.open {
+                .answer {
+                    max-height: rem(300);
+                    overflow-y: scroll;
+                }
+                p { clip-path: inset(0 0 0 0) }
+                .arrow { transform: rotate(180deg) }
+            }
+        }
+
+        h3 {
+            display: flex;
+            gap: .5rem;
+            align-items: center;
+            font-family: var(--ff-poppins);
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--p-clr);
+            cursor: pointer;
+
+            .arrow,
+            span { transition: .4s ease }
+        }
+        .ques { color: var(--main-clr) }
+        .arrow { 
+            margin-left: auto;
+            transition: .4s ease;
+        }
+
+        .answer {
+            max-height: 0px;
+            overflow: hidden;
+            transition: .4s ease;
+        }
+        p {
+            padding-top: rem(10);
+            clip-path: inset(0 0 100% 0);
+            color: var(--p-clr);
+            transition: .4s ease;
+        }
+    }
+}

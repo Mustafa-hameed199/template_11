@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Fonts ~~~~~~~~~~~~~~~~~~ -->
+        <!-- Poppins  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans&family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet"> 
+        <!-- Montserrat  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+        <!-- Open Sans -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet"> 
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Font Awesome ~~~~~~~~~~~~~~~~~~ -->
+        <link rel="stylesheet" href="./css/all.min.css">
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ CSS ~~~~~~~~~~~~~~~~~~ -->
+        <link rel="stylesheet" href="./css/style.css">
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ JS ~~~~~~~~~~~~~~~~~~ -->
+        <script src="./js/main.js" defer ></script>
+        <title>Bootslander</title>
+    </head>
+    <body>
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~~~~ -->
+        <header class="header">
+            <div class="container">
+                <nav class="nav">
+                    <span class="nav__logo">bootslander</span>
+                    <div class="nav__icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="shadow">
+                        <ul class="nav__ul">
+                            <li><a href="#" data-scroll="home">home</a></li>
+                            <li><a href="#" data-scroll="about">about</a></li>
+                            <li><a href="#" data-scroll="features">features</a></li>
+                            <li><a href="#" data-scroll="gallery">gallery</a></li>
+                            <li><a href="#" data-scroll="team">team</a></li>
+                            <li><a href="#" data-scroll="pricing">pricing</a></li>
+                            <li><a href="#" data-scroll="contact">contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Home ~~~~~~~~~~~~~~~~~~ -->
+        <section class="home sec ovh" id="home"> // ovh => overflow: hidden 
+            <div class="container">
+                <div class="home__box">
+                    <div class="home__img reveal spot scale-in delay-03"><img src="./img/hero-img.png" alt="Home Image"></div>
+                    <div class="home__text">
+                        <div class="content reveal spot scale-in">
+                            <h1 class="home__title">build your landing page with <span>bootslander</span></h1>
+                            <p class="home__p">we are team of talented designers making websites with Bootstrap</p>
+                            <a href="#" class="home__btn">get started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wave"></div>
+        </section>
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ About ~~~~~~~~~~~~~~~~~~ -->
+        <section class="about sec ovh" id="about">
+            <div class="container">
+                <div class="about__box">
+                    <div class="about__video reveal spot move-left-100">
+                        <img src="./img/about.png" alt="About Image">
+                        <a href="https://www.youtube.com" target="_blank"><i class="fa-solid fa-play"></i></a>
+                    </div>
+                    <div class="about__text">
+                        <h2 class="title reveal spot move-right-100">Enim quis est voluptatibus aliquid consequatur fugiat</h2>
+                        <p class="desc reveal spot move-right-100">
+                            Esse voluptas cumque vel exercitationem.
+                            Reiciendis est hic accusamus. Non ipsam et sed minima temporibus laudantium.
+                            Soluta voluptate sed facere corporis dolores excepturi.
+                            Libero laboriosam sint et id nulla tenetur. Suscipit aut voluptate.
+                        </p>
+                        <div class="items">
+                            <div class="item reveal spot scale-out">
+                                <div class="icon">
+                                    <i class="fa-solid fa-fingerprint"></i>
+                                </div>
+                                <div class="text">
+                                    <h3><a href="#">lorem ipsum</a></h3>
+                                    <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+                                </div>
+                            </div>
+                            
+                            <div class="item reveal spot scale-out">
+                                <div class="icon">
+                                    <i class="fa-solid fa-gift"></i>
+                                </div>
+                                <div class="text">
+                                    <h3><a href="#">nemo enim</a></h3>
+                                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+                                </div>
+                            </div>
+                            
+                            <div class="item reveal spot scale-out">
+                                <div class="icon">
+                                    <i class="fa-solid fa-atom"></i>
+                                </div>
+                                <div class="text">
+                                    <h3><a href="#">dine pad</a></h3>
+                                    <p>Explicabo est voluptatum asperiores consequatur magnam. Et veritatis odit. Sunt aut deserunt minus aut eligendi omnis</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Features ~~~~~~~~~~~~~~~~~~ -->
+        <section class="features sec ovh" id="features">
+            <div class="container">
+                <div class="main-heading reveal spot move-bottom-100">
+                    <h2>features</h2>
+                    <p>check the features</p>
+                </div>
+                <div class="features__box">
+                    <div class="item reveal spot move-right-scale-out delay-03">
+                        <i class="fa-solid fa-store"></i>
+                        <a href="#">lorem ipsum</a>
+                    </div>
+                    
+                    <div class="item reveal spot move-right-scale-out delay-03">
+                        <i class="fa-solid fa-chart-column"></i>
+                        <a href="#">dolor sitema</a>
+                    </div>
+
+                    <div class="item reveal spot move-right-scale-out delay-03">
+                        <i class="fa-solid fa-calendar-minus"></i>
+                        <a href="#">sed perspiciatis</a>
+                    </div>
+
+                    <div class="item reveal spot move-right-scale-out delay-03">
+                        <i class="fa-solid fa-paint-roller"></i>
+                        <a href="#">magni dolores</a>
+                    </div>
+
+                    <div class="item reveal spot move-right-scale-out delay-03">
+                        <i class="fa-solid fa-database"></i>
+                        <a href="#">nemo enim</a>
+                    </div>
+
+                    <div class="item reveal spot move-right-scale-out delay-03">
+                        <i class="fa-regular fa-circle-dot"></i>
+                        <a href="#">eiusmod tempor</a>
+                    </div>
+
+                    <div class="item reveal spot move-right-scale-out delay-03">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <a href="#">midela teren</a>
+                    </div>
+
+                    <div class="item reveal spot move-right-scale-out delay-03">
+                        <i class="fa-solid fa-tags"></i>
+                        <a href="#">pira neve</a>
+                    </div>
+
+                    <div class="item reveal spot move-right-scale-out delay-03">
+                        <i class="fa-solid fa-anchor"></i>
+                        <a href="#">dirada pack</a>
+                    </div>
+
+                    <div class="item reveal spot move-right-scale-out delay-03">
+                        <i class="fa-solid fa-compact-disc"></i>
+                        <a href="#">moton ideal</a>
+                    </div>
+
+                    <div class="item reveal spot move-right-scale-out delay-03">
+                        <i class="fa-solid fa-tower-observation"></i>
+                        <a href="#">verdo park</a>
+                    </div>
+
+                    <div class="item reveal spot move-right-scale-out delay-03">
+                        <i class="fa-solid fa-fingerprint"></i>
+                        <a href="#">flavor nivelanda</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Stats ~~~~~~~~~~~~~~~~~~ -->
+        <section class="sec stats ovh">
+            <div class="container">
+                <div class="stats__box">
+                    <div class="item reveal spot move-bottom">
+                        <i class="fa-regular fa-face-smile-beam"></i>
+                        <span>happy client</span>
+                    </div>
+                    
+                    <div class="item reveal spot move-bottom">
+                        <i class="fa-solid fa-book-journal-whills"></i>
+                        <span>project</span>
+                    </div>
+                    
+                    <div class="item reveal spot move-bottom">
+                        <i class="fa-solid fa-headphones"></i>
+                        <span>hours of supports</span>
+                    </div>
+                    
+                    <div class="item reveal spot move-bottom">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span>hard workers</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Details ~~~~~~~~~~~~~~~~~~ -->
+        <section class="details sec ovh">
+            <div class="container">
+                <div class="details__box">
+                    <div class="item">
+                        <div class="item__img reveal spot move-left-100">
+                            <img src="./img/details-1.png" alt="Details Image">
+                        </div>
+                        <div class="item__text reveal spot move-bottom-100">
+                            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+                            <p class="mb italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <ul>
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span>                                
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>Iure at voluptas aspernatur dignissimos doloribus repudiandae.</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>Est ipsa assumenda id facilis nesciunt placeat sed doloribus praesentium.</span>                                
+                                </li>
+                            </ul>
+                            <p>Voluptas nisi in quia excepturi nihil voluptas nam et ut. Expedita omnis eum consequatur non. Sed in asperiores aut repellendus. Error quisquam ab maiores. Quibusdam sit in officia</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item__text reveal spot move-bottom-100">
+                            <h3> Corporis temporibus maiores provident </h3>
+                            <p class="mb italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p class="mb">Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                            <p class="mb">Inventore id enim dolor dicta qui et magni molestiae. Mollitia optio officia illum ut cupiditate eos autem. Soluta dolorum repellendus repellat amet autem rerum illum in. Quibusdam occaecati est nisi esse. Saepe aut dignissimos distinctio id enim.</p>
+                        </div>
+                        <div class="item__img reveal spot move-right-100">
+                            <img src="./img/details-2.png" alt="Details Image">
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item__img reveal spot move-left-100">
+                            <img src="./img/details-3.png" alt="Details Image">
+                        </div>
+                        <div class="item__text reveal spot move-bottom-100">
+                            <h3> Sunt consequatur ad ut est nulla consectetur reiciendis animi voluptas </h3>
+                            <p class="mb">Cupiditate placeat cupiditate placeat est ipsam culpa. Delectus quia minima quod. Sunt saepe odit aut quia voluptatem hic voluptas dolor doloremque.</p>
+                            <ul>
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    <span> Duis aute irure dolor in reprehenderit in voluptate velit.</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    <span> Facilis ut et voluptatem aperiam. Autem soluta ad fugiat.</span>
+                                </li>
+                            </ul>
+                            <p class="mb">Qui consequatur temporibus. Enim et corporis sit sunt harum praesentium suscipit ut voluptatem. Et nihil magni debitis consequatur est.</p>
+                            <p>Suscipit enim et. Ut optio esse quidem quam reiciendis esse odit excepturi. Vel dolores rerum soluta explicabo vel fugiat eum non.</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item__text reveal spot move-bottom-100">
+                            <h3>Quas et necessitatibus eaque impedit ipsum animi consequatur incidunt in</h3>
+                            <p class="mb italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p class="mb">Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                            <ul>
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    <span> Et praesentium laboriosam architecto nam .</span>    
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    <span> Eius et voluptate. Enim earum tempore aliquid. Nobis et sunt consequatur. Aut repellat in numquam velit quo dignissimos et.</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>Facilis ut et voluptatem aperiam. Autem soluta ad fugiat.</span>    
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item__img reveal spot move-right-100">
+                            <img src="./img/details-4.png" alt="Detail Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Gallery ~~~~~~~~~~~~~~~~~~ -->
+        <section class="sec gallery ovh" id="gallery">
+            <div class="container">
+                <div class="main-heading reveal spot move-bottom">
+                    <h2>gallery</h2>
+                    <p>check our gallery</p>
+                </div>
+                <div class="gallery__box">
+                    <div class="img reveal spot move-right-scale-out"> <img src="./img/gallery/gallery-1.jpg" alt="Gallery Image"> </div>
+                    <div class="img reveal spot move-right-scale-out"> <img src="./img/gallery/gallery-2.jpg" alt="Gallery Image"> </div>
+                    <div class="img reveal spot move-right-scale-out"> <img src="./img/gallery/gallery-3.jpg" alt="Gallery Image"> </div>
+                    <div class="img reveal spot move-right-scale-out"> <img src="./img/gallery/gallery-4.jpg" alt="Gallery Image"> </div>
+                    <div class="img reveal spot scale-out"> <img src="./img/gallery/gallery-5.jpg" alt="Gallery Image"> </div>
+                    <div class="img reveal spot scale-out"> <img src="./img/gallery/gallery-6.jpg" alt="Gallery Image"> </div>
+                    <div class="img reveal spot scale-out"> <img src="./img/gallery/gallery-7.jpg" alt="Gallery Image"> </div>
+                    <div class="img reveal spot scale-out"> <img src="./img/gallery/gallery-8.jpg" alt="Gallery Image"> </div>
+                </div>
+
+                <div class="popup-img">
+                    <div class="cancel-btn"><i class="fa-solid fa-xmark"></i></div>
+                    <div class="right-btn"><i class="fa-solid fa-chevron-right"></i></div>
+                    <div class="left-btn"><i class="fa-solid fa-chevron-left"></i></div>
+                    <div class="box"><div class="slider"></div></div>
+                </div>
+            </div>
+        </section>
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Gallery ~~~~~~~~~~~~~~~~~~ -->
+        <section class="testimonials ovh">
+            <div class="container">
+                <div class="box reveal spot move-bottom-100">
+                    <div class="slider">
+                        <div class="person">
+                            <img src="./img/testimonials/testimonials-1.jpg" alt="person Image">
+                            <h3>saul goodman</h3>
+                            <h5>ceo & founder</h5>
+                            <p> 
+                                <i class="fa-solid fa-quote-left"></i>
+                                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper. 
+                                <i class="fa-solid fa-quote-right"></i>    
+                            </p>
+                        </div>
+
+                        <div class="person">
+                            <img src="./img/testimonials/testimonials-2.jpg" alt="person Image">
+                            <h3>sara wilsson</h3>
+                            <h5>designer</h5>
+                            <p> 
+                                <i class="fa-solid fa-quote-left"></i>
+                                Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa. 
+                                <i class="fa-solid fa-quote-right"></i>    
+                            </p>
+                        </div>
+
+                        <div class="person">
+                            <img src="./img/testimonials/testimonials-3.jpg" alt="person Image">
+                            <h3>jena karlis</h3>
+                            <h5>store owner</h5>
+                            <p> 
+                                <i class="fa-solid fa-quote-left"></i>
+                                Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim. 
+                                <i class="fa-solid fa-quote-right"></i>    
+                            </p>
+                        </div>
+
+                        <div class="person">
+                            <img src="./img/testimonials/testimonials-4.jpg" alt="person Image">
+                            <h3>matt brandon</h3>
+                            <h5>freelancer</h5>
+                            <p> 
+                                <i class="fa-solid fa-quote-left"></i>
+                                Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.  
+                                <i class="fa-solid fa-quote-right"></i>    
+                            </p>
+                        </div>
+
+                        <div class="person">
+                            <img src="./img/testimonials/testimonials-5.jpg" alt="person Image">
+                            <h3>jhon larson</h3>
+                            <h5>entreprenur</h5>
+                            <p> 
+                                <i class="fa-solid fa-quote-left"></i>
+                                Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.   
+                                <i class="fa-solid fa-quote-right"></i>    
+                            </p>
+                        </div>
+                    </div>
+                    <ul class="indicators"></ul>
+                </div>
+            </div>
+        </section>
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Team ~~~~~~~~~~~~~~~~~~ -->
+        <section class="team sec ovh" id="team">
+            <div class="container">
+                <div class="main-heading reveal spot move-bottom">
+                    <h2>team</h2>
+                    <p>our great team</p>
+                </div>
+                <div class="team__box">
+                    <div class="person-card reveal spot move-right-scale-out">
+                        <div class="img">
+                            <img src="./img/team/team-1.jpg" alt="Team Picture">
+                        </div>
+                        <h3>walter white</h3>
+                        <p>chief executive officer</p>
+                        <ul class="social">
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="person-card reveal spot move-right-scale-out">
+                        <div class="img">
+                            <img src="./img/team/team-2.jpg" alt="Team Picture">
+                        </div>
+                        <h3>sarah jhonson</h3>
+                        <p>prudoct manager</p>
+                        <ul class="social">
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="person-card reveal spot move-right-scale-out">
+                        <div class="img">
+                            <img src="./img/team/team-3.jpg" alt="Team Picture">
+                        </div>
+                        <h3>william anderson</h3>
+                        <p>CTO</p>
+                        <ul class="social">
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="person-card reveal spot move-right-scale-out">
+                        <div class="img">
+                            <img src="./img/team/team-4.jpg" alt="Team Picture">
+                        </div>
+                        <h3>amanda jepson</h3>
+                        <p>accountant</p>
+                        <ul class="social">
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Pricing ~~~~~~~~~~~~~~~~~~ -->
+        <section class="pricing sec" id="pricing">
+            <div class="container">
+                <div class="main-heading reveal spot move-bottom">
+                    <h2>pricing</h2>
+                    <p>check our pricing</p>
+                </div>
+                <div class="pricing__box">
+                    <div class="price-card reveal spot move-right-scale-out">
+                        <h3 class="title">free</h3>
+                        <h4 class="price"><sup>$</sup>0<span> / month</span></h4>
+                        <ul>
+                            <li>aida dere</li>
+                            <li>nec feugiat nisl</li>
+                            <li>nulla at volutpat dola</li>
+                            <li class="line">pharetra massa</li>
+                            <li class="line">massa ultricies mi</li>
+                        </ul>
+                        <div class="btn"> <a href="#" >buy now</a> </div>
+                    </div>
+
+                    <div class="price-card reveal spot move-right-scale-out">
+                        <h3 class="title bg-green">business</h3>
+                        <h4 class="price"><sup>$</sup>19<span> / month</span></h4>
+                        <ul>
+                            <li>aida dere</li>
+                            <li>nec feugiat nisl</li>
+                            <li>nulla at volutpat dola</li>
+                            <li>pharetra massa</li>
+                            <li class="line">massa ultricies mi</li>
+                        </ul>
+                        <div class="btn"> <a href="#" >buy now</a> </div>
+                    </div>
+
+                    <div class="price-card reveal spot move-right-scale-out">
+                        <h3 class="title">developer</h3>
+                        <h4 class="price"><sup>$</sup>29<span> / month</span></h4>
+                        <ul>
+                            <li>aida dere</li>
+                            <li>nec feugiat nisl</li>
+                            <li>nulla at volutpat dola</li>
+                            <li>pharetra massa</li>
+                            <li>massa ultricies mi</li>
+                        </ul>
+                        <div class="btn"> <a href="#" >buy now</a> </div>
+                    </div>
+
+                    <div class="price-card reveal spot move-right-scale-out">
+                        <h3 class="title advanced">ultimate</h3>
+                        <h4 class="price"><sup>$</sup>49<span> / month</span></h4>
+                        <ul>
+                            <li>aida dere</li>
+                            <li>nec feugiat nisl</li>
+                            <li>nulla at volutpat dola</li>
+                            <li>pharetra massa</li>
+                            <li>massa ultricies mi</li>
+                        </ul>
+                        <div class="btn"> <a href="#" >buy now</a> </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ FAQ ~~~~~~~~~~~~~~~~~~ -->
+        <section class="FAQ sec">
+            <div class="container">
+                <div class="main-heading reveal spot move-bottom">
+                    <h2>f.a.q</h2>
+                    <p>frequently asked questions</p>
+                </div>
+                <div class="FAQ__box">
+                    <div class="question open reveal spot move-bottom">
+                        <h3>
+                            <i class="fa-regular fa-circle-question ques"></i>
+                            <span>Non consectetur a erat nam at lectus urna duis?</span>
+                            <i class="fa-solid fa-angle-up arrow"></i>
+                        </h3>
+                        <div class="answer">
+                            <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
+                        </div>
+                    </div>
+
+                    <div class="question reveal spot move-bottom">
+                        <h3>
+                            <i class="fa-regular fa-circle-question ques"></i>
+                            <span>Feugiat scelerisque varius morbi enim nunc? </span>
+                            <i class="fa-solid fa-angle-up arrow"></i>
+                        </h3>
+                        <div class="answer">
+                            <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
+                        </div>
+                    </div>
+
+                    <div class="question reveal spot move-bottom">
+                        <h3>
+                            <i class="fa-regular fa-circle-question ques"></i>
+                            <span>Dolor sit amet consectetur adipiscing elit? </span>
+                            <i class="fa-solid fa-angle-up arrow"></i>
+                        </h3>
+                        <div class="answer">
+                            <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis</p>
+                        </div>
+                    </div>
+
+                    <div class="question reveal spot move-bottom">
+                        <h3>
+                            <i class="fa-regular fa-circle-question ques"></i>
+                            <span>Tempus quam pellentesque nec nam aliquam sem et tortor consequat? </span>
+                            <i class="fa-solid fa-angle-up arrow"></i>
+                        </h3>
+                        <div class="answer">
+                            <p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in.</p>
+                        </div>
+                    </div>
+
+                    <div class="question reveal spot move-bottom">
+                        <h3>
+                            <i class="fa-regular fa-circle-question ques"></i>
+                            <span>Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor?  </span>
+                            <i class="fa-solid fa-angle-up arrow"></i>
+                        </h3>
+                        <div class="answer">
+                            <p>Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Contact ~~~~~~~~~~~~~~~~~~ -->
+        <section class="contact sec ovh" id="contact">
+            <div class="container">
+                <div class="main-heading reveal spot move-bottom">
+                    <h2>contact</h2>
+                    <p>contact us</p>
+                </div>
+                <div class="contact__box">
+                    <div class="contact__address reveal spot move-left-100">
+                        <div class="info">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div class="text">
+                                <h4>location:</h4>
+                                <p>A108 adam street, new york, NY 535022</p>
+                            </div>
+                        </div>
+
+                        <div class="info">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div class="text">
+                                <h4>email:</h4>
+                                <p>info@example.com</p>
+                            </div>
+                        </div>
+
+                        <div class="info">
+                            <i class="fa-solid fa-mobile-button"></i>
+                            <div class="text">
+                                <h4>call:</h4>
+                                <p>+1 5589 55488 55s</p>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact__form reveal spot move-right-100">
+                        <div>
+                            <input type="text" class="name" placeholder="Your Name">
+                            <input type="text" class="email" placeholder="Your Email">
+                        </div>
+                        <input type="text" class="subject" placeholder="Subject">
+                        <textarea rows="6" placeholder="Message"></textarea>
+                        <button type="submit" class="btn">send message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~~~~~~ -->
+        <footer class="footer sec">
+            <div class="container">
+                <div class="footer__box">
+                    <div class="info">
+                        <div class="border-top">
+                            <h4>bootslander</h4>
+                            <p class="italic">Qui repudiandae et eum dolores alias sed ea. Qui suscipit veniam excepturi quod.</p>
+                            <br/>
+                            <p>
+                                A108 Adam Street<br/>
+                                NY 535022, USA
+                            </p>
+                            <br/>
+                            <p>
+                                <strong>Phone:</strong> +1 5589 55488 55<br/>
+                                <strong>Email:</strong> info@example.com
+                            </p>
+                            <br/>
+                            <ul class="social">
+                                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-skype"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="info">
+                        <h5>useful links</h5>
+                        <ul class="links">
+                            <li>
+                                <i class="fa-solid fa-angle-right"></i>
+                                <a href="#">home</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-angle-right"></i>
+                                <a href="#">about us</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-angle-right"></i>
+                                <a href="#">services</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-angle-right"></i>
+                                <a href="#">terms of service</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-angle-right"></i>
+                                <a href="#">privacy policy</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="info">
+                        <h5>our service</h5>
+                        <ul class="links">
+                            <li>
+                                <i class="fa-solid fa-angle-right"></i>
+                                <a href="#">web design</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-angle-right"></i>
+                                <a href="#">web development</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-angle-right"></i>
+                                <a href="#">product management</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-angle-right"></i>
+                                <a href="#">marketing</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-angle-right"></i>
+                                <a href="#">graphic design</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="info subscribe">
+                        <h5>our newsletter</h5>
+                        <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+                        <form>
+                            <input type="text">
+                            <button type="submit" class="btn">subscribe</button>
+                        </form>
+                    </div>
+                </div>
+                <p class="copyright"> © copyright <strong>bootslander</strong>. all rights reserved </p>
+                <p class="source">desined by <a href="https://bootstrapmade.com/" target="_blank">BootstrapMade</a></p>
+            </div>
+        </footer>
+
+    </body>
+</html>

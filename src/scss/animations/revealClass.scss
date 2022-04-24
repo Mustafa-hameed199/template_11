@@ -1,0 +1,32 @@
+.reveal {
+    opacity: 0 !important;
+    transition: 1.25s ease-in-out !important;
+}
+
+.revealed {
+    opacity: 1 !important;
+    transform: translate(0,0) scale(1) !important;
+}
+
+@for $i from 1 through 9 {
+    .delay-0#{$i} { transition-delay: $i * 0.1s !important }
+    .delay-1#{$i} { transition-delay:  ($i * 0.1s) + 1 !important}
+}
+
+
+.scale-in { transform: scale(1.5) }
+.scale-out { transform: scale(.3) }
+
+.move-right-scale-out { transform: translateX(80px) scale(.3) }
+
+.move-right { transform: translateX(100%) }
+.move-left { transform: translateX(-100%) }
+.move-top { transform: translateY(-100%) }
+.move-bottom { transform: translateY(100%) }
+
+.move-right-100 { transform: translateX(100px) }
+.move-left-100 { transform: translateX(-100px) }
+.move-top-100 { transform: translateY(-100px) }
+.move-bottom-100 { transform: translateY(100px) }
+
+.ovh { overflow: hidden }

@@ -1,0 +1,194 @@
+@use "../global/variables.scss" as *;
+@use "../util/" as *;
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    text-transform: capitalize;
+    padding: 1rem 0;
+    color: white;
+    transition: .3s ease;
+
+    &.scrolled {
+        background-color: rgba( $secondary-clr , .9);
+        padding: .5rem 0;
+    }
+
+    .nav {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: rem(5) 0;
+
+        &__logo {
+            font-family: var(--ff-montserrat);
+            font-size: rem(28);
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        &__icon {
+            position: relative;
+            height: rem(22);
+            width: rem(32);
+            cursor: pointer;
+
+            span {
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: rem(2);
+                border-radius: rem(10);
+                background-color: white;
+                transition: .4s ease;
+                pointer-events: none;
+            }
+
+            span:nth-child(1) {
+                top: 0;
+                left: 0;
+            }
+            &.animate span:nth-child(1) { animation: rotate .4s ease forwards }
+            &.unAnimate span:nth-child(1) { animation: unRotate .4s ease forwards }
+            span:nth-child(2) {
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+            }
+            &.animate span:nth-child(2) { transform: translateY(-50%) scale(0); }
+            &.unAnimate span:nth-child(2) { transition-delay: .1s }
+            span:nth-child(3) {
+                bottom: 0;
+                left: 0;
+            }
+            &.animate span:nth-child(3) { animation: rotate2 .4s ease forwards }
+            &.unAnimate span:nth-child(3) { animation: unRotate2 .4s ease forwards }
+            @include br(md) { display: none }
+        }
+
+        .shadow {
+            position: absolute;
+            top: calc(100% + .5rem);
+            left: 0;
+            z-index: 100;
+            width: 100%;
+            box-shadow: rem(5) 0 rem(10) rgba(black , .1);
+            border-radius: 0 0 rem(5) rem(5);
+            height: 0;
+            background: white;
+            transition: .3s ease;
+            &.show {
+                height: var(--h); // ul height
+                ul { clip-path: inset(0 0 0 0) }
+            }
+            @include br(md) { 
+                all: unset;
+                flex: .8;
+            }
+            @include br(lg) { flex: .7 }
+        }
+        
+        &__ul {
+            text-align: center;
+            padding: rem(5) 0;
+            transition: .3s ease;
+            clip-path: inset(0 0 100% 0);
+            @include br(md) { 
+                clip-path: unset;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            a {
+                position: relative;
+                display: block;
+                padding: rem(5) 0;
+                color: var(--secondary-clr);
+                transition: .3s ease;
+                &:hover,
+                &.active {
+                    color: var(--main-clr);
+                    @include br(md) { 
+                        &::before { width: 50% }
+                        color: white
+                    }
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 0;
+                    height: rem(2);
+                    background-color: var(--main-clr);
+                    border-radius: rem(10);
+                    transition: .5s ease;
+                }
+
+                @include br(md) {
+                    color: rgba(white, .7);
+                    padding: rem(5);
+                }
+            }
+        }
+    }
+}
+
+@keyframes rotate {
+    50% {
+        top: 50%;
+        transform: translateY(-50%);
+    } 
+    100% {
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+    }
+}
+
+@keyframes unRotate {
+    0% {
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+    }
+    50% {
+        top: 50%;
+        transform: translateY(-50%) rotate(0deg);
+    } 
+    100% {
+        top: 0%;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes rotate2 {
+    50% {
+        bottom: 50%;
+        transform: translateY(-50%);
+    } 
+    100% {
+        bottom: 50%;
+        transform: translateY(-50%) rotate(-45deg);
+    }
+}
+
+@keyframes unRotate2 {
+    0% {
+        bottom: 50%;
+        transform: translateY(-50%) rotate(-45deg);
+
+    }
+    50% {
+        bottom: 50%;
+        transform: translateY(-50%) rotate(0deg);
+    }
+    100% {
+        bottom: 0%;
+        transform: translateY(0%);
+    }
+}
